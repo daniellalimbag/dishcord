@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* after your @tailwind directives */
+
+html {
+  @apply bg-background text-text;
+}
+/* theme color variables */
+:root[data-theme="light"] {
+  --text: #1a1209;
+  --text-rgb: 26, 18, 9;
+  --background: #fffdf7;
+  --primary: #ff944d;
+  --secondary: #3aa66a;
+  --accent: #0c572b;
+}
+
+:root[data-theme="dark"] {
+  --text: #f8f3e9;
+  --text-rgb: 248, 243, 233;
+  --background: #12120f;
+  --primary: #f27830;
+  --secondary: #115c34;
+  --accent: #a4d394;
+}
+
+
+
+input[type="email"], input[type="password"], input[type="text"] {
+  @apply disabled:bg-transparent disabled:cursor-not-allowed;
+}
+
+button[type="submit"] {
+    @apply disabled:bg-red-300;
+    @apply disabled:border-red-300;
+    @apply disabled:cursor-not-allowed;
+}
+
+.text-glow {
+  text-shadow: 
+     0 0 8px rgba(255,255,255,0.8),
+     0 0 16px rgba(255,255,255,0.5);
+}
