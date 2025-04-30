@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {useState} from "react";
 import { logMessage } from "../lib/logger";
+import { signIn } from "next-auth/react";
 
 export default function signup() {
 
@@ -171,6 +172,14 @@ export default function signup() {
                                 Sign up as Manager (to manage a business or restaurant)
                             </label>
                             </div>
+                            <button
+                                type="button"
+                                onClick={() => signIn('google', { callbackUrl: '/' })}
+                                className="h-12 w-full rounded-full bg-white text-black font-semibold border border-gray-300 flex items-center justify-center gap-2 mb-4 hover:bg-gray-100"
+                            >
+                                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" className="h-6 w-6" />
+                                <span>Sign up with Google</span>
+                            </button>
                             <button
                                 className="h-[50px] w-full rounded-[50px] border-[2px] border-primary border-primary bg-primary text-foreground font-xl cursor-pointer mt-6"
                                 type="button"
