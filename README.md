@@ -5,7 +5,7 @@ Dishcord is a social food review platform where users can discover, rate, and di
 Status: In Development
 
 <p float="left">
-  <img src="screenshot1.png" width="800"/>
+  <img src="Screenshot_1.png" width="800"/>
 </p>
 
 ---
